@@ -45,12 +45,12 @@ class _CandidatList extends State<CandidatList> {
         if (snapshot.hasData) {
           print(snapshot.data);
           var data = jsonDecode(snapshot.data);
-          return ListView(
+          return SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            children: [
+            child: Row(children: [
               for (var i = 0; i < data.length; i++)
                 CandidatButton(CandidatDTO.toCandidat(data[i])),
-            ],
+            ],)
           );
           // Afficher les données
           return Text(snapshot.data);
@@ -59,7 +59,7 @@ class _CandidatList extends State<CandidatList> {
           return Text('Error: ${snapshot.error}');
         } else {
           // Afficher un indicateur de chargement
-          return CircularProgressIndicator();
+          return Center(child: CircularProgressIndicator(),);
         }
       },
     );

@@ -1,4 +1,5 @@
 
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vote_me/candidat/cadidat_list.dart';
@@ -30,7 +31,9 @@ class _ElectionPage extends State<ElectionPage>{
       appBar: AppBar(
         title: Text('${electionDTO.libele}'),
       ),
-      body:CandidatList(electionDTO),
+      body: ListView(children: [
+        CandidatList(electionDTO),
+      ],),
     );
   }
 }

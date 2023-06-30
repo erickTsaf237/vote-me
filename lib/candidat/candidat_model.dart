@@ -10,6 +10,7 @@ class CandidatDTO extends Model{
   late String nom;
   late String prenom;
   late String parti;
+  late String image;
   late String lien;
   late DateTime date_naissance;
   late String id_election;
@@ -22,6 +23,7 @@ class CandidatDTO extends Model{
         required this.parti,
         required this.id_election,
         this.id,
+        this.image = ''
       }){
     date_naissance = DateTime.now();
     lien = '';
@@ -61,7 +63,7 @@ class CandidatDTO extends Model{
   }
 
   static CandidatDTO toCandidat(Map<String, dynamic> re){
-    return CandidatDTO(nom: re['nom'], prenom: re['prenom'], parti: re['parti'], id_election :re['id_election'],  id: re['_id']);
+    return CandidatDTO(nom: re['nom'], prenom: re['prenom'], parti: re['parti'], id_election :re['id_election'],  id: re['_id'], image: re['image']??'');
   }
 
   // CandidatDTO.http(re){

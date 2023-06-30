@@ -6,8 +6,8 @@ import 'package:http/http.dart' as http;
 
 abstract class Model{
 
-  // static String host = 'http://localhost:3000';
-  static const String host = "https://organisations.adaptable.app";
+  static String host = 'http://localhost:3000';
+  // static const String host = "https://organisations.adaptable.app";
   // static String host = 'http://localhost:3000';
   static String token='';
 

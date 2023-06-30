@@ -10,7 +10,7 @@ class ElectionList extends StatefulWidget {
   State<StatefulWidget> createState() {
     return _ElementionList();
   }
-}
+}g
 
 class _ElementionList extends State<ElectionList> {
   final ElectionDTO _stream = ElectionDTO('libele', 'code', DateTime.now(), 1);
